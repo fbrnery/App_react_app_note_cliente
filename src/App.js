@@ -1,11 +1,11 @@
 import React from 'react'; 
 import Routes from './routes';
+import './app.scss'
 
 
 function App() {
   return (
     <div>
-      <h1> Testando Rotas</h1>
      <Routes/>
     </div>
   );
