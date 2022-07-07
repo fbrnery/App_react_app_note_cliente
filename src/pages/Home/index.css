@@ -1,10 +1,26 @@
 body {
     background-color: blueviolet;
+    color: aliceblue;
+    height: calc(100% - 70px);
+    
 }
 
 img, svg {
     vertical-align: middle;
     height: 50%;
     width: 50%;
+}
+
+.col {
+    flex: 1 0 0%;
+    color: aliceblue;
+    font-style: italic;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right:3rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: justify;
 }
 
