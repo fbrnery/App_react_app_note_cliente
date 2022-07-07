@@ -8,7 +8,7 @@ function Header() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid">
+        <div className="container">
           <a className="navbar-brand" href="#">
             <img src={logoImage} />
           </a>

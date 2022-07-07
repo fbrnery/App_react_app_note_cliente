@@ -1,9 +1,9 @@
 .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
+    display: flexbox;
     flex-basis: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 0px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-left: 10px;
 
 }
 
@@ -11,4 +11,5 @@
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 3.5rem;
     padding-left: 0.5rem;
+    color: blue;
 }
