@@ -10,7 +10,9 @@ function Header() {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container">
           <a className="navbar-brand" href="#">
+            <Link to="/">
             <img src={logoImage} />
+            </Link>
           </a>
           <button
             className="navbar-toggler"
@@ -27,21 +29,18 @@ function Header() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                <Link to="/">Home</Link>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Features
+                <Link to="/register">Register</Link>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+                <button type="button" className="btn btn-outline-secondary">
+                <Link to="/login">Login</Link>
+                </button>
               </li>
             </ul>
           </div>

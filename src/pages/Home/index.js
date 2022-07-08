@@ -22,9 +22,9 @@ function Home() {
           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
           laying out print.
         </h6>
-        <button type="button" class="btn btn-outline-info">
-          Register for free Nowstrong
-        </button>
+        <Link to='/register' type="button" className="btn btn-dark">
+          <strong>Register for free now</strong>
+        </Link>
         </div>
         </div>
     </Fragment>
