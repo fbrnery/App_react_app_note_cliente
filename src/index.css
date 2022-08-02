@@ -3,3 +3,8 @@ html, body, #root {
     padding: 0px;
     height: 100%;
   }
+
+  body {
+    background-color: #1a81dc;
+    color: aliceblue;
+}

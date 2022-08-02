@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoImage from "../../assets/images/logo.png";
+import logoImage from "../../assets/images/aplicativo_escolar.png";
 import './index.css'
 
 
@@ -38,7 +38,7 @@ function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <button type="button" className="btn btn-outline-secondary">
+                <button type="button" className="btn btn-outline-info">
                 <Link to="/login">Login</Link>
                 </button>
               </li>

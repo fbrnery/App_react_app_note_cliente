@@ -11,16 +11,4 @@ img, svg {
     width: 50%;
 }
 
-.col {
-    flex: 1 0 0%;
-    color: aliceblue;
-    font-style: italic;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 3rem;
-    margin-right:3rem;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    text-align: justify;
-}
 

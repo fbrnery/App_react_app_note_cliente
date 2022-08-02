@@ -5,29 +5,28 @@ import "./index.css";
 
 function Home() {
   return (
-    <Fragment>
-      <div class="container-fluid">
-      <div class="col">
-        <img
-          src={presentationImage}
-          class="col-md-6 float-md-end mb-3 ms-md-3"
-          alt="..."
-        />
-        <h2> Create notes easily and access when you wants on the cloud</h2>
-        <h6>
-          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-          laying out print, graphic or web designs.
-          <br />
-          <br />
-          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-          laying out print.
-        </h6>
-        <Link to='/register' type="button" className="btn btn-dark">
-          <strong>Register for free now</strong>
-        </Link>
-        </div>
-        </div>
-    </Fragment>
+    <main>
+   <h1 class="visually-hidden">Heroes examples</h1>
+
+<div class="px-4 py-5 my-5 text-center">
+<img src={presentationImage}/>
+  <h1 class="display-5 fw-bold">App Note</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+    The application allows you to organize meetings in a virtual file. 
+    There is even a Premium version, which the user can upload up to 10 GB of data per month.
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" className="btn btn-light">
+    <Link to="/register">Login In</Link>
+    </button>
+    <button type="button" className="btn btn-light">
+    <Link to="/">Sign Up</Link>
+    </button>
+    </div>
+  </div>
+</div>
+    </main>
   );
 }
 
