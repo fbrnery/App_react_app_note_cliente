@@ -2,12 +2,26 @@ import React, { Fragment, useState } from "react";
 import { Redirect } from "react-router-dom";
 import "./index.css";
 
+import UserService from "../../../services/users";
+
 function RegisterForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirectToLogin, setRedirectToLogin] = useState(false);
   const [error, setError] = useState(false);
+
+   const handleSubmit = async (evt) => {
+       evt.preventDefault();
+   
+       try {
+         const user = await UserService.register({name: name,email: email,password: password});
+         setRedirectToLogin(true);
+       } catch (error) {
+         setError(true)
+       }
+     }
+   
 
   if (redirectToLogin) return <Redirect to={{ pathname: "/login" }} />;
 
@@ -17,7 +31,7 @@ function RegisterForm() {
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-8 mx-auto">
             <h1 className="fw-light">Your notes on the cloud</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
             <div className="col">
               
              <input 
