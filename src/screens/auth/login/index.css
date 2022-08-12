@@ -1,4 +1,8 @@
 body {
-    background-color: aliceblue;
-    color: blue;
+   
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: greenyellow;
 }
