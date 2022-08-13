@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Redirect } from "react-router-dom";
 import "./index.css";
+import UserService from '../../../services/users';
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -8,6 +9,17 @@ function LoginForm() {
   const [RedirectToRegister, setRedirectToRegister] = useState(false);
   const [RedirectToNotes, setRedirectToNotes] = useState(false);
   const [error, setError] = useState(false);
+
+   const handleSubmit = async (evt) => {
+       evt.preventDefault();
+   
+       try {
+         await UserService.login({email: email,password: password});
+         setRedirectToNotes(true);
+       } catch (error) {
+         setError(true)
+       }
+     }
 
   if (RedirectToRegister) return <Redirect to={{ pathname: "/register" }} />;
   else if (RedirectToNotes) return <Redirect to={{ pathname: "/notes" }} />;
@@ -18,7 +30,7 @@ function LoginForm() {
       <section className="py-5 text-center container">
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-8 mx-auto">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div class="mb-3">
                 <input
                   value={email}

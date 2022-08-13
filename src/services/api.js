@@ -1,5 +1,12 @@
-import axios from "axios";
+import Api from "./api";
 
-const Api = axios.create({baseURL: "http://localhost:3001"})
+const UserService = {
+  register: (params) => Api.post("/users/register", params),
+  login: async (params) => {
+    const response = await Api.post("/users/login", params)
+    localStorage.setItem('user', JSON.stringify(response.data.user));
+    localStorage.setItem('token', response.data.token);
+  },
+}
 
-export default Api;
+export default UserService;
