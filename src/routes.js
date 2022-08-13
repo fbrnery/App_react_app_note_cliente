@@ -7,6 +7,7 @@ import NotesIndex from './screens/notes/index'
 import UserEdit from './screens/users/edit'
 import RegisterForm from './component/auth/register_form';
 import LoginForm from './component/auth/login_form';
+import PrivateRoute from './component/auth/private_route';
 
 const Routes = () => {
   return(
@@ -20,6 +21,8 @@ const Routes = () => {
         <Route exact path='/users/edit' component={UserEdit} />
         <Route exact path='/register_form' component={RegisterForm} />
         <Route exact path='/login_form' component={Login} />
+        <PrivateRoute exact path='/users/edit' component={UserEdit} />
+        
       </Switch>
     </BrowserRouter>
   )
