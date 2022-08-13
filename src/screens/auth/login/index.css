@@ -6,3 +6,11 @@ body {
     --bs-text-opacity: 1;
     color: greenyellow;
 }
+
+.row {
+    margin-top: -3rem; 
+    padding-top: 1rem;  
+}
+
+
+

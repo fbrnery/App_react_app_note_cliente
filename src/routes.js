@@ -6,6 +6,7 @@ import Login from './screens/auth/login'
 import NotesIndex from './screens/notes/index'
 import UserEdit from './screens/users/edit'
 import RegisterForm from './component/auth/register_form';
+import LoginForm from './component/auth/login_form';
 
 const Routes = () => {
   return(
@@ -18,6 +19,7 @@ const Routes = () => {
         <Route exact path='/notes' component={NotesIndex} />
         <Route exact path='/users/edit' component={UserEdit} />
         <Route exact path='/register_form' component={RegisterForm} />
+        <Route exact path='/login_form' component={Login} />
       </Switch>
     </BrowserRouter>
   )
