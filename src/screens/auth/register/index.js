@@ -1,11 +1,8 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
-import Header from "../../../component/Header";
-import LogoImage from "../../../assets/images/logo.png";
 import "./index.css";
-import RegisterForm from "../../../component/auth/register_form";
+import RegisterForm from "../../../components/auth/register_form";
 
-function Register() {
+function RegisterScreen() {
   return (
     <Fragment>
       <div class="container-fluid">
@@ -15,4 +12,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default RegisterScreen;

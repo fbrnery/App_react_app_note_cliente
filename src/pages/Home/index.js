@@ -6,8 +6,6 @@ import "./index.css";
 function Home() {
   return (
     <main>
-      <h1 class="visually-hidden">Heroes examples</h1>
-
       <div class="px-4 py-5 my-5 text-center">
         <img src={presentationImage} />
         <h1 class="display-5 fw-bold">App Note</h1>

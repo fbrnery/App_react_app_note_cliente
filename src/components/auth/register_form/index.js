@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Redirect } from "react-router-dom";
 import "./index.css";
 
-import UserService from "../../../services/users";
+import UsersService from "../../../services/users";
 
 function RegisterForm() {
   const [name, setName] = useState("");
@@ -11,35 +11,38 @@ function RegisterForm() {
   const [redirectToLogin, setRedirectToLogin] = useState(false);
   const [error, setError] = useState(false);
 
-   const handleSubmit = async (evt) => {
+   const HandleSubmit = async (evt) => {
        evt.preventDefault();
    
        try {
-         const user = await UserService.register({name: name,email: email,password: password});
+         const user = await UsersService.register({name: name,email: email,password: password});
          setRedirectToLogin(true);
        } catch (error) {
          setError(true)
        }
      }
    
-  if (redirectToLogin) return <Redirect to={{ pathname: "/login" }} />;
+  if (redirectToLogin) 
+    return <Redirect to={{ pathname: "/login" }} />
 
   return (
-    <fragment>
+    <Fragment>
       <section className="py-5 text-center container">
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-8 mx-auto">
             <h1 className="fw-light">Your notes on the cloud</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={HandleSubmit}>
             <div className="col">
               
-             <input 
-             value={name}
-             onChange={e => setName(e.target.value)}
-             type="text" 
-             class="form-control" 
-             placeholder="Name" 
-             aria-label="First name"/>
+             <input
+              type="name"
+              required
+              name="name"
+              value={name}
+              onChange={e => setName(e.target.value)} 
+              class="form-control" 
+              placeholder="Name" 
+              aria-label="First name"/>
               </div>
 
               <div class="mb-3">
@@ -97,7 +100,7 @@ function RegisterForm() {
           </div>
         </div>
       </section>
-    </fragment>
+    </Fragment>
   );
 }
 

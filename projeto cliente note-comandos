@@ -1,0 +1,35 @@
+1-  Instalar o express generator:
+
+$ npm i express-generator
+
+2- Gerar o projeto com express:
+
+$ express --view=no view javascript_note_api
+
+3- Instalar todas as bibliotecas:
+
+$ npm install
+
+4- Instalar o servidor nodemon:
+
+$ npm i nodemon --save
+
+5- Instalando o banco de dados mongo db:
+
+$ npm i mongoose --save
+
+6- Subir o servidor:
+
+$ nodemon start
+
+7- Instalar a biblioteca de autenticação bcrypt:
+
+$ npm i bcrypt --save
+
+8- Instalar o token:
+
+$ npm i jsonwebtoken --save
+
+$ npm i dotenv --save
+
+ 

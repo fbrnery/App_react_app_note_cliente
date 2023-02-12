@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
 
-function Notes() {
+function NotesScreen() {
     return (
       <div>
         <Fragment>
@@ -11,4 +11,4 @@ function Notes() {
     );
   }
 
-export default Notes;
+export default NotesScreen;

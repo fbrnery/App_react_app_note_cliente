@@ -10,7 +10,7 @@ function LoginForm() {
   const [RedirectToNotes, setRedirectToNotes] = useState(false);
   const [error, setError] = useState(false);
 
-   const handleSubmit = async (evt) => {
+   const HandleSubmit = async (evt) => {
        evt.preventDefault();
    
        try {
@@ -21,8 +21,10 @@ function LoginForm() {
        }
      }
 
-  if (RedirectToRegister) return <Redirect to={{ pathname: "/register" }} />;
-  else if (RedirectToNotes) return <Redirect to={{ pathname: "/notes" }} />;
+  if (RedirectToRegister) 
+  return <Redirect to={{ pathname: "/register" }} />
+  else if (RedirectToNotes) 
+  return <Redirect to={{ pathname: "/notes" }} />
 
   return (
     <Fragment>
@@ -30,7 +32,7 @@ function LoginForm() {
       <section className="py-5 text-center container">
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-8 mx-auto">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={HandleSubmit}>
               <div class="mb-3">
                 <input
                   value={email}
