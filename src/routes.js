@@ -6,6 +6,7 @@ import RegisterScreen from "./screens/auth/register";
 import LoginScreen from "./screens/auth/login";
 import NotesIndexScreen from "./screens/notes/index";
 import UserEditScreen from "./screens/users/edit";
+
 import PrivateRouter from './components/auth/private_route';
 
 const Routes = () => {

@@ -1,13 +1,11 @@
 import React, { Fragment } from 'react';
-import { Link } from "react-router-dom";
+import HeaderLogged from '../../../components/header_logged';
 
 function NotesScreen() {
     return (
-      <div>
-        <Fragment>
-            <h1> Bem vindo, a página Notes !!!</h1>
-        </Fragment>
-      </div>
+      <Fragment>
+          <HeaderLogged />
+      </Fragment>
     );
   }
 
